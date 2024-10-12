@@ -1,172 +1,85 @@
+/* General Styles */
 body {
-    padding: 20px;
-    background-color: #f4f6f9;
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #343a40;
-    margin: 0;
+    background-image: url('background.jpg'); /* Adjust the file name if necessary */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Adjust text color for contrast against background */
 }
 
-.container {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    margin: 40px auto;
-    max-width: 800px;
-    transition: all 0.3s ease;
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Adds a blur effect to the background */
 }
 
+.navbar .nav-link {
+    color: white; /* Change nav link color */
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #00ffcc; /* Neon effect on hover */
+}
+
+/* Header Styles */
 h1 {
-    color: #333;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc; /* Neon glow effect */
+    font-size: 24px;
 }
 
-label {
-    color: #555;
-    font-weight: 500;
-}
-
-.centered-textarea {
-    display: block;
-    margin: 20px auto;
-    width: 100%;
-    min-height: 150px;
-    padding: 15px;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
-    resize: none;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-    background-color: #f8f9fa;
-}
-
-.centered-textarea:hover,
-.centered-textarea:focus {
-    border-color: #007bff;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.1);
-}
-
-.btn-primary {
-    background-color: #007bff;
+/* Form and Input Styles */
+textarea, input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
     border: none;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    border-radius: 6px;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+    padding: 10px;
+    color: white; /* Text color */
+    width: 100%;
+    transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+textarea:focus, input[type="text"]:focus {
+    background-color: rgba(0, 255, 204, 0.3); /* Light neon background on focus */
 }
 
-.success-message {
-    color: green;
-    margin-top: 10px;
-    font-size: 1rem;
-    text-align: center;
+/* Button Styles */
+.btn {
+    background-color: #00ffcc; /* Neon button background */
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
+.btn:hover {
+    background-color: #009999; /* Darker neon effect on hover */
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Glow effect on hover */
+}
+
+/* Footer Styles */
 .footer {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
     text-align: center;
-    font-size: 1rem;
-    color: #555;
-    margin-top: 50px;
-    border-top: 1px solid #e9ecef;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    margin: 20px 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7); /* Light footer text */
 }
 
-.footer p {
-    margin: 0;
-}
-
-.container-buttons {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.container-buttons .btn {
-    margin: 10px;
-    padding: 10px 15px;
-    border-radius: 6px;
-    border: none;
-    background-color: #28a745;
-    color: white;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
-
-.container-buttons .btn:hover {
-    background-color: #218838;
-    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
-}
-
-#result {
+/* Command List Styles */
+#listOfCommands, #listOfCommandsEvent, #prefixOfCommands, #adminOfCommands {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
     padding: 15px;
     margin-top: 20px;
-    border-radius: 8px;
-    background-color: #f8f9fa;
-    font-size: 1rem;
-    color: #333;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); /* Neon shadow */
 }
 
-.center-placeholder::placeholder {
-    text-align: center;
+/* Checkbox Styles */
+label {
+    color: white; /* Checkbox label color */
 }
 
-.form-check {
-    display: flex;
-    margin-top: 15px;
-    padding: 14px;
-    align-items: center;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease; 
-    background-color: #ffffff;
-}
-
-.form-check:hover {
-    background-color: #f8f9fa;
-    border-color: #007bff;
-}
-
-.form-check-input {
-    margin-right: 12px;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.disable {
-    display: none;
-}
-
-#inputOfPrefix, #inputOfAdmin {
-    padding: 12px;
-    width: 220px;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
-    transition: all 0.3s ease; 
-    background-color: #ffffff;
-}
-
-#inputOfPrefix:hover, #inputOfAdmin:hover {
-    border-color: #007bff;
-}
-
-#listOfCommands, #listOfCommandsEvent, #prefixOfCommands, #adminOfCommands {
-    border: none;
-    box-shadow: none;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 18px; /* Adjust header font size for smaller screens */
+    }
 }
